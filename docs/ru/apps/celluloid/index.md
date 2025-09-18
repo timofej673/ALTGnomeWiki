@@ -1,7 +1,7 @@
 ---
 aggregation:
-  sisyphus: celluloid
   flatpak: io.github.celluloid_player.Celluloid
+  sisyphus: celluloid
 appstream:
   id: io.github.celluloid_player.Celluloid
   name: Celluloid
@@ -22,7 +22,7 @@ appstream:
 
 Celluloid (ранее GNOME MPV) — простой графический интерфейс на основе библиотеки GTK для [MPV](/apps/mpv/). Он призван быть простым в использовании при сохранении высокого уровня кастомизации.
 
-![celluloid1.png](/celluloid/celluloid-1.png)
+![Celluloid](/celluloid/celluloid-1.png)
 
 <!--@include: @ru/apps/.parts/install/content-repo.md-->
 <!--@include: @ru/apps/.parts/install/content-flatpak.md-->

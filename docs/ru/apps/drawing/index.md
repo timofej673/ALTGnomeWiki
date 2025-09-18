@@ -1,5 +1,8 @@
 ---
 aggregation:
+  snap:
+    id: drawing
+    build: stable
   sisyphus: drawing
   flatpak: com.github.maoschanz.drawing
 appstream:
@@ -28,5 +31,11 @@ Drawing — базовый редактор изображений, которы
 
 ![Drawing](/drawing/drawing-1.png)
 
+<<<<<<< HEAD:docs/ru/apps/drawing/index.md
 <!--@include: @ru/apps/.parts/install/content-repo.md-->
 <!--@include: @ru/apps/.parts/install/content-flatpak.md-->
+=======
+<!--@include: @apps/.parts/install/content-repo.md-->
+<!--@include: @apps/.parts/install/content-flatpak.md-->
+<!--@include: @apps/.parts/install/content-snap.md-->
+>>>>>>> fef604ae (docs: add Linux Theme Store, Gradia and lot of fixes for other (#705)):docs/apps/drawing.md
