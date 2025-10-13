@@ -112,6 +112,7 @@ export const sidebar = (): DefaultTheme.SidebarItem[] => [
           { text: 'Krita', link: 'krita/' },
           { text: 'Kega Fusion', link: 'kega-fusion/' },
           { text: 'Lazarus', link: 'lazarus/' },
+          { text: 'Lenspect', link: 'lenspect/' },
           { text: 'LibreOffice', link: 'libreoffice/' },
           { text: 'Loupe', link: 'loupe/' },
           { text: 'Lunacy', link: 'lunacy/' },
