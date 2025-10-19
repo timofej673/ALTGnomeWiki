@@ -44,7 +44,7 @@ You can enable the AnyDesk service with the following command:
 serv anydesk on
 ```
 
-For correct operation, you must install the `libgtkglext` library. It is included in the AnyDesk installation script starting with version [eepm](/package-manager/epm/) `3.62.10`. If you have an earlier version of the package manager installed, you need to install the library separately:
+For correct operation, you must install the `libgtkglext` library. It is included in the AnyDesk installation script starting with version [eepm](/en/package-manager/epm/) `3.62.10`. If you have an earlier version of the package manager installed, you need to install the library separately:
 
 ::: code-group
 
