@@ -16,7 +16,7 @@ appstream:
 
 # Ayugram
 
-Ayugram is a cross-platform custom [Telegram](/apps/telegram/) client with open source code. Distributed under the free GPLv3 license
+Ayugram is a cross-platform custom [Telegram](/en/apps/telegram/) client with open source code. Distributed under the free GPLv3 license
 
 <!--@include: @en/apps/.parts/install/content-repo.md-->
 
@@ -30,7 +30,7 @@ By default, Ayugram disables the "Similar Channels" section
 
 - Disable notification delay
 
-Notification delay is a built-in feature of [Telegram](/apps/telegram/) that delays notifications in the current client session if you are online from another
+Notification delay is a built-in feature of [Telegram](/en/apps/telegram/) that delays notifications in the current client session if you are online from another
 
 ### Selecting an application icon
 
