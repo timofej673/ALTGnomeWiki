@@ -40,18 +40,18 @@
   }
 }
 
-:slotted(.AGWAppPageMembers) {
+:slotted(.AGWAppRows) {
   padding: 0 24px;
 }
 
 @media (min-width: 768px) {
-  :slotted(.AGWAppPageMembers) {
+  :slotted(.AGWAppRows) {
     padding: 0 48px;
   }
 }
 
 @media (min-width: 960px) {
-  :slotted(.AGWAppPageMembers) {
+  :slotted(.AGWAppRows) {
     padding: 0 64px;
   }
 }
