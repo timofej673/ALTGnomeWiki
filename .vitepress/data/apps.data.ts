@@ -1,9 +1,17 @@
+// data/apps.data.ts
+import { defineLoader } from 'vitepress'
 import fs from 'fs'
 import path from 'path'
 import yaml from 'js-yaml'
 import type { AppData, App } from '../theme/types'
 
-function loadAppsData(): AppData {
+export const data: AppData = {
+  apps: [],
+  locale: 'ru',
+  loadedAt: ''
+}
+
+async function loadAppsData(): Promise<AppData> {
   const baseDir = process.cwd()
 
   const locales = ['ru', 'en']
@@ -25,18 +33,16 @@ function loadAppsData(): AppData {
 
         apps = parsedData
         loadedLocale = locale
-        console.log(`✅ [apps.data] Loaded ${apps.length} apps for locale: ${locale}`)
+        console.log(`[apps.data] Loaded ${apps.length} apps for locale: ${locale}`)
         break
       } catch (error) {
-        console.error(`❌ [apps.data] Failed to load apps for ${locale}:`, error)
+        console.error(`[apps.data] Failed to load apps for ${locale}:`, error)
       }
-    } else {
-      console.log(`🔍 [apps.data] File not found: ${yamlPath}`)
     }
   }
 
   if (apps.length === 0) {
-    console.warn('⚠️ [apps.data] No apps found for any locale')
+    console.warn('[apps.data] No apps found for any locale')
   }
 
   return {
@@ -46,10 +52,12 @@ function loadAppsData(): AppData {
   }
 }
 
-export const data: AppData = loadAppsData()
+loadAppsData().then((loadedData) => {
+  Object.assign(data, loadedData)
+  console.log(`[apps.data] Initialized with ${data.apps.length} apps`)
+})
 
-import { defineLoader } from 'vitepress'
 export default defineLoader({
   watch: ['./docs/**/apps-gnome/apps.yaml'],
-  load: () => Promise.resolve(data)
+  load: loadAppsData
 })

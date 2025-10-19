@@ -49,6 +49,13 @@ defineProps<{
   --agw-btn-hover-color: var(--vp-c-white);
 }
 
+.more {
+  --agw-btn-bg: var(--vp-c-green-dimm-1);
+  --agw-btn-color: var(--vp-c-green-darker);
+  --agw-btn-hover-bg: var(--vp-c-green-dark);
+  --agw-btn-hover-color: var(--vp-c-white);
+}
+
 .btn {
   padding: 8px 24px;
   text-align: center;

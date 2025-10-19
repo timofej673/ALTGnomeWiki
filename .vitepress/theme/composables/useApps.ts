@@ -1,6 +1,7 @@
 import { computed } from 'vue'
 import { useData } from './data'
-import { data as appsData } from '../../data/apps.data'
+import { data as yamlAppsData } from '../../data/apps.data'
+import { data as docsAppsData } from '../../data/docs-apps.data'
 import { transformKeywords, transformActions } from './useMeta'
 import type { App, Apps, MetaKeywords, MetaActionItem } from '../types'
 
@@ -8,24 +9,49 @@ export function useApps() {
   const { theme } = useData()
 
   const apps = computed<App[]>(() => {
-    if (!appsData || !appsData.apps || !Array.isArray(appsData.apps)) {
-      console.warn('❌ No apps data found')
-      return []
-    }
-    console.log('✅ Apps data loaded:', appsData.apps.length, 'apps')
-    return appsData.apps
+    const yamlApps: App[] = yamlAppsData?.apps || []
+    const docsApps: App[] = docsAppsData || []
+
+    console.log(`📊 YAML apps: ${yamlApps.length}, Docs apps: ${docsApps.length}`)
+
+    const mergedApps = [...docsApps]
+
+    yamlApps.forEach((yamlApp) => {
+      const existingIndex = mergedApps.findIndex((docApp) => docApp.appstream.name === yamlApp.appstream.name)
+
+      if (existingIndex === -1) {
+        mergedApps.push(yamlApp)
+      } else {
+        const existingApp = mergedApps[existingIndex]
+        mergedApps[existingIndex] = {
+          ...yamlApp,
+          more: existingApp.more
+        }
+      }
+    })
+
+    console.log(`✅ Total merged apps: ${mergedApps.length}`)
+    return mergedApps
   })
 
   const transformApp = (app: App): Apps => {
     const meta = theme.value.meta
+
+    const aggregationWithMore = { ...app.aggregation }
+    if (app.more) {
+      aggregationWithMore.more = { id: app.more }
+    }
+
+    const actions = transformActions(aggregationWithMore, meta?.actions)
 
     return {
       name: app.appstream.name,
       icon: app.appstream.icon,
       summary: app.appstream.summary,
       keywords: transformKeywords(app.appstream.keywords, meta?.keywords) as MetaKeywords[],
-      actions: transformActions(app.aggregation, meta?.actions) as MetaActionItem[],
-      group: app.group
+      actions: actions,
+      group: app.group,
+      more: app.more
     }
   }
 
@@ -44,10 +70,15 @@ export function useApps() {
     return apps.slice(0, limit)
   }
 
+  const getAppsWithDocs = (apps: Apps[]): Apps[] => {
+    return apps.filter((app) => app.more)
+  }
+
   return {
     apps,
     transformedApps,
     filterAppsByGroup,
-    filterAppsByLimit
+    filterAppsByLimit,
+    getAppsWithDocs
   }
 }

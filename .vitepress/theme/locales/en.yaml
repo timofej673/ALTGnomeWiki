@@ -22,6 +22,7 @@ meta:
     flatpak: Flapak
     snap: Snap
     extension: GNOME Extensions
+    more: More
 member:
   sponsor: Sponsor
 

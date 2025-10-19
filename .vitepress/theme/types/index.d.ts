@@ -113,13 +113,16 @@ export namespace AGWTheme {
 
 export interface App {
   appstream: {
+    id?: string
     name: string
     icon: string
     summary: string
     keywords?: string[]
+    url: string
   }
   aggregation?: Record<string, any>
   group?: string
+  more?: string
 }
 
 export interface Apps {
@@ -129,6 +132,7 @@ export interface Apps {
   keywords?: MetaKeywords[]
   actions?: MetaActionItem[]
   group?: string
+  more?: string
 }
 
 export interface AppData {

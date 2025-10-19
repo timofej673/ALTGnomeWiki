@@ -23,6 +23,7 @@ meta:
     flatpak: Flapak
     snap: Snap
     extension: GNOME Extensions
+    more: Подробнее
 member:
   sponsor: Поддержать
 
