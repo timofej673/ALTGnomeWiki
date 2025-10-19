@@ -37,7 +37,6 @@ function formatDomain(url: string): { line1: string; line2: string } {
     return { line1: 'download.basealt', line2: '.ru' }
   }
 
-  // Общая логика для других доменов
   const parts = domain.split('.')
 
   if (parts.length >= 3) {
