@@ -16,6 +16,6 @@ stplr in {{ $frontmatter?.aggregation?.stplr?.id }}
 stplr repo add aides https://altlinux.space/aides-community/aides.git
 ```
 
-:::danger  Отказ от ответственности
+:::danger Отказ от ответственности
 Используйте пакеты и инструкции только на свой страх и риск. Сборка пакетов происходит локально, поэтому проверяйте исходный код и сборочные скрипты.
 :::

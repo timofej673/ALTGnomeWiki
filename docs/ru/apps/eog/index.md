@@ -4,7 +4,7 @@ aggregation:
   flatpak: org.gnome.eog
 appstream:
   id: org.gnome.eog
-  name: Глаз Gnome
+  name: Глаз GNOME
   icon: /eog/eog-logo.svg
   summary: Официальная утилита для рабочего окружения GNOME, которая поддерживает множество форматов, позволяя просматривать как отдельные изображения, так и коллекции.
   metadata_license:

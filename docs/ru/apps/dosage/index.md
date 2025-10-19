@@ -13,7 +13,6 @@ appstream:
   developer:
     name: Diego Povliuk
     nickname: diegopvlk
-
   url:
     homepage: https://github.com/diegopvlk/Dosage
     bugtracker: https://github.com/diegopvlk/Dosage/issues

@@ -6,7 +6,7 @@ appstream:
   id: com.github.maoschanz.drawing
   name: Drawing
   icon: /drawing/drawing-logo.svg
-  summary: простой редактор изображений, похожий на Microsoft Paint.
+  summary: Простой редактор изображений, похожий на Microsoft Paint.
   developer:
     name: Romain F. T.
     nickname: maoschanz
