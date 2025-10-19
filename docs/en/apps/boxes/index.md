@@ -161,7 +161,7 @@ ln -s /path/to/directory ~/.local/share/gnome-boxes
 `/path/to/directory` — the directory to which you want to move the virtual machines.
 
 ::: warning
-Boxes must be installed [from the repository](/apps/boxes/#install-from-repository). Changing the directory via [Flatpak](/package-manager/flatpak/) is currently **not supported**.
+Boxes must be installed [from the repository](/apps/boxes/#install-from-repository). Changing the directory via [Flatpak](/en/package-manager/flatpak/) is currently **not supported**.
 :::
 
 ## Shortcuts
