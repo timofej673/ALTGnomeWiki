@@ -61,6 +61,7 @@ function setActiveTab(index: number) {
 .AGWDownloads {
   display: grid;
   gap: 24px;
+  padding: 0 24px;
 }
 
 .container {
@@ -71,7 +72,7 @@ function setActiveTab(index: number) {
 .download-rows {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 16px;
 }
 
 .home-layout {
@@ -101,6 +102,7 @@ function setActiveTab(index: number) {
 
 .tabs {
   display: flex;
+  flex-direction: column;
   gap: 12px;
   margin-bottom: 32px;
   overflow-x: auto;
@@ -156,6 +158,12 @@ function setActiveTab(index: number) {
   position: relative;
 }
 
+@media (min-width: 640px) {
+  .tabs {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 768px) {
   .title {
     font-size: 48px;
@@ -169,9 +177,12 @@ function setActiveTab(index: number) {
   }
 }
 
-@media (min-width: 968px) {
+@media (min-width: 960px) {
   .AGWDownloadsTitle {
     padding: 80px 64px 48px;
+  }
+  .download-rows {
+    gap: 24px;
   }
 }
 </style>

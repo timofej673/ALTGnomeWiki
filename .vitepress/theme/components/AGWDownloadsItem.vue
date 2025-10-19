@@ -68,9 +68,7 @@ onMounted(async () => {
                 <dt>Тип выпуска:</dt>
                 <dd>{{ branch.name }}</dd>
               </dl>
-              <div class="action">
-                <AGWDownloadButton :urls="branch.images[0].urls" />
-              </div>
+              <AGWDownloadButton :urls="branch.images[0].urls" />
             </div>
           </template>
         </div>
@@ -92,7 +90,7 @@ onMounted(async () => {
   flex-grow: 1;
   background-color: var(--vp-c-bg-soft);
   border-radius: 12px;
-  padding: 48px 32px;
+  padding: 24px 16px;
   position: relative;
 }
 
@@ -122,6 +120,7 @@ onMounted(async () => {
 
 .actions {
   display: inline-flex;
+  flex-direction: column;
   gap: 8px;
 }
 
@@ -154,17 +153,22 @@ onMounted(async () => {
 
 .download {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 12px;
   background-color: var(--vp-c-bg);
   border-radius: 12px;
+  gap: 12px;
 }
 
 dl {
   margin-top: 0;
   margin-bottom: 0;
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 8px;
   margin-right: auto;
+  width: 100%;
 }
 
 dt {
@@ -179,5 +183,43 @@ dd {
   font-weight: bold;
   padding-left: 4px;
   padding-right: 8px;
+}
+
+.AGWDownloadButton {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AGWDownloadButton :deep(.VPButton) {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  dl {
+    display: inline-flex;
+    grid-template-columns: none;
+  }
+
+  .AGWDownloadButton {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .actions {
+    flex-direction: row;
+  }
+  .download {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .card {
+    padding: 48px 32px;
+  }
 }
 </style>
