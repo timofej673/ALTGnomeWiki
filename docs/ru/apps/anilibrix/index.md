@@ -23,9 +23,9 @@ appstream:
     homepage: https://github.com/pavloniym/anilibrix
     bugtracker: https://github.com/pavloniym/anilibrix/issues
 gallery:
-  title: Галерея
+  title: Скриншоты приложения AniLibrix
   type: slider
-  items:
+  images:
     - src: /anilibrix/anilibrix-1.png
     - src: /anilibrix/anilibrix-2.png
     - src: /anilibrix/anilibrix-3.png
@@ -35,7 +35,7 @@ gallery:
 
 AniLibrix — десктопный аниме-кинотеатр Анилибрии для любого вашего компьютера. Анилибрия — так звучит аниме!
 
-<AGWGallery />
+<Gallery />
 
 <!--@include: @ru/apps/.parts/install/content-snap.md-->
 <!--@include: @ru/apps/.parts/install/content-epm-play.md-->

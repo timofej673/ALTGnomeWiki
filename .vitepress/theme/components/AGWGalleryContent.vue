@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { VPImage } from 'vitepress/theme'
-import { useImagePath } from '../composables/useImagePath'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import type { AGWGallery } from '../types/index'
 import 'swiper/css'
@@ -17,18 +16,6 @@ const props = withDefaults(defineProps<Props>(), {
   images: () => [],
   alias: 'gallery'
 })
-
-const getImagePath = useImagePath()
-
-const images = computed(
-  () =>
-    props.images
-      ?.filter((img) => img.src)
-      .map((img) => ({
-        ...img,
-        path: getImagePath(img.src)
-      })) ?? []
-)
 </script>
 
 <template>
@@ -40,10 +27,10 @@ const images = computed(
           <figure class="figure">
             <figure class="figure ratio ratio-16x9">
               <VPImage
-                :image="image.path"
+                :image="image?.src"
                 :data-fancybox="alias"
                 :data-caption="image.caption"
-                :alt="image.alt ?? 'Gallery image'"
+                :alt="image?.alt ?? 'Gallery image'"
               />
             </figure>
             <figcaption v-if="image.caption" class="figcaption">
@@ -58,7 +45,7 @@ const images = computed(
     <template v-else-if="type === 'grid' && images.length > 0">
       <div class="AGWGalleryContentGrid">
         <div v-for="image in images" :key="image.src" class="AGWGalleryGridItem">
-          <VPImage :image="image.path" :data-fancybox="alias" :alt="image.alt ?? 'Gallery image'" />
+          <VPImage :image="image?.src" :data-fancybox="alias" :alt="image?.alt ?? 'Gallery image'" />
         </div>
       </div>
     </template>
@@ -74,10 +61,10 @@ const images = computed(
           <figure class="figure">
             <figure class="figure ratio ratio-1x1">
               <VPImage
-                :image="image.path"
+                :image="image.src"
                 :data-fancybox="alias"
                 :data-caption="image.caption"
-                :alt="image.alt ?? 'Gallery image'"
+                :alt="image?.alt ?? 'Gallery image'"
               />
             </figure>
             <figcaption v-if="image.caption" class="figcaption">
@@ -88,7 +75,6 @@ const images = computed(
       </Swiper>
     </template>
 
-    <!-- Empty state -->
     <div v-else class="empty-gallery">
       <p>No images to display</p>
     </div>
