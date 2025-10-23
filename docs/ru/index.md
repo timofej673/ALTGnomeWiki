@@ -26,8 +26,8 @@ features:
   - icon:
       dark: /bolt-dark.svg
       light: /bolt-light.svg
-    title: Раньше чем у других
-    details: Ежедневно обновляемый репозиторий пакетов свободных программ Sisyphus
+    title: Раньше, чем у других
+    details: Ежедневно обновляемый репозиторий пакетов свободных программ Sisyphus.
   - icon:
       dark: /shield-dark.svg
       light: /shield-light.svg
