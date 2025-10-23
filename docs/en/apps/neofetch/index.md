@@ -4,7 +4,7 @@ aggregation:
 appstream:
   name: Neofetch
   icon: /neofetch/neofetch-logo.png
-  summary: Средство для отображения информации о системе.
+  summary: A tool for displaying system information.
   metadata_license:
     name: MIT License
     link: https://choosealicense.com/licenses/mit/
@@ -29,11 +29,11 @@ appstream:
 
 # Neofetch
 
-Neofetch — средство вывода системной информации в командную строку, написанное на `bash 3.2+`. Он отображает информацию о вашей операционной системе, программном и аппаратном обеспечении эстетичным и визуально приятным способом.
+Neofetch is a command line output tool written in `bash 3.2+`. It displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 
-## Установка из репозитория
+## Installation from the repository
 
-**Neofetch** можно установить через терминал:
+**Neofetch** can be installed through terminal:
 
 ::: code-group
 
@@ -49,30 +49,30 @@ epm -i neofetch
 
 :::
 
-## Конфигурация
+## Configuration
 
-Neofetch имеет довольно гибкую конфигурацию, и каждый может настроить его под себя.
+Neofetch has a fairly flexible configuration, and anyone can customize it for themselves.
 
 ::: info
-В данном блоке рассматривается настройка на примере [одной из пользовательских конфигураций](https://github.com/fiersik/fiersik_dots/tree/main/neofetch).
+This block discusses configuration using the example of [one of the custom configurations](https://github.com/fiersik/fiersik_dots/tree/main/neofetch).
 
-Для его правильного отображения необходимо установить один из [Nerd-шрифтов](https://www.nerdfonts.com/font-downloads).
+To display it correctly, you must install one of the [Nerd fonts](https://www.nerdfonts.com/font-downloads).
 :::
 
 ::: tabs
-== По умолчанию
-![по умолчанию](/neofetch/neofetch-config-no.png)
+== Deafult
+![default](/neofetch/neofetch-config-no.png)
 
 == Fiersik
 ![Fiersik](/neofetch/neofetch-config-custom.png)
 :::
 
-### Функция `print_info`
+### `print_info` function
 
-Основная визуальная часть настраивается в данной функции.
+The main visual part is configured in this function.
 
 ::: tabs
-== По умолчанию
+== default
 
 ```shell
 print_info() {
@@ -130,17 +130,17 @@ print_info() {
 
 :::
 
-**Структура строки**
+**Term structure**
 
 ::: tabs
 == info
-Функция `info` выводит один из параметров системы.
+The `info` function displays one of the system parameters.
 
 ```shell
-info "КОММЕНТАРИЙ" ПАРАМЕТР
+info "COMMENT" PARAMETR
 ```
 
-Пример:
+Example:
 
 ```shell
     info "Theme" theme
@@ -151,7 +151,7 @@ info "КОММЕНТАРИЙ" ПАРАМЕТР
 
 ```
 
-Вывод:
+Output:
 
 ```shell
 Theme: Adwaita [GTK2/3]
@@ -162,40 +162,40 @@ GPU: AMD ATI Radeon RX 580 2048SP
 ```
 
 == prin
-Функция `prin` выводит произвольную строку или переменную оболочки.
+The `prin` function prints an arbitrary string or shell variable.
 
 ```shell
-prin "СТРОКА"
+prin "STRING"
 ```
 
-Пример:
+Example:
 
 ```shell
     info "Host" model
     info "Kernel" kernel
-    prin "Строка с переменной '${USER}'" # [!code focus]
+    prin "String with variable '${USER}'" # [!code focus]
     info "Uptime" uptime
     info "Packages" packages
 ```
 
-Вывод:
+Output:
 
 ```shell
 OS: ALT Regular Sisyphus x86_64
 Kernel: 6.8.8-6.8-alt1
-Строка с переменной 'fiersik' # [!code focus]
+String with variable 'fiersik' # [!code focus]
 Uptime: 1 hour, 7 mins
 Packages: 2208 (rpm), 35 (flatpak), 4 (snap)
 ```
 
 == echo
-Функция `echo` выводит пустую строку.
+The `echo` function outputs an empty string.
 
 ```shell
 echo
 ```
 
-Пример:
+Example:
 
 ```shell
     info "Shell" shell
@@ -205,7 +205,7 @@ echo
     info "WM" wm
 ```
 
-Вывод:
+Output:
 
 ```shell
 Shell: zsh 5.9
@@ -217,53 +217,53 @@ WM: Mutter
 
 :::
 
-::: details Возможные параметры
+::: details Possible parameters
 
-| Переменная   | Значение              |
-| :----------- | :-------------------- |
-| `title`      | Заголовок (user@host) |
-| `underline`  | Разделительная черта  |
-| `distro`     | Дистрибутив           |
-| `model`      | Модель ПК             |
-| `kernel`     | Ядро                  |
-| `uptime`     | Время работы          |
-| `packages`   | Пакеты                |
-| `shell`      | Оболочка              |
-| `resolution` | Разрешение экрана     |
-| `de`         | Окружение             |
-| `wm`         | Оконный менеджер      |
-| `wm_theme`   | Тема окон             |
-| `theme`      | Тема                  |
-| `icons`      | Тема иконок           |
-| `term`       | Терминал              |
-| `term_font`  | Шрифт терминала       |
-| `cpu`        | Процессор             |
-| `gpu`        | Видеокарта            |
-| `memory`     | Оперативная память    |
-| `gpu_driver` | Драйвер видеокарты    |
-| `disk`       | Диск                  |
-| `battery`    | Батарея               |
-| `font`       | Шрифт                 |
-| `song`       | Песня                 |
-| `local_ip`   | Локальный IP-адрес    |
-| `public_ip`  | Публичный IP-адрес    |
-| `users`      | Пользователь          |
-| `locale`     | Локаль                |
-| `cols`       | Цветовые блоки        |
+| Variable     | Value              |
+| :----------- | ------------------ |
+| `title`      | Header (user@host) |
+| `underline`  | Dividing line      |
+| `distro`     | Distribution       |
+| `model`      | PC model           |
+| `kernel`     | Core               |
+| `uptime`     | Opening hours      |
+| `packages`   | Packages           |
+| `shell`      | Shell              |
+| `resolution` | Screen resolution  |
+| `de`         | Environment        |
+| `wm`         | Window manager     |
+| `wm_theme`   | Window theme       |
+| `theme`      | Subject            |
+| `icons`      | Icon theme         |
+| `term`       | Terminal           |
+| `term_font`  | Terminal font      |
+| `cpu`        | CPU                |
+| `gpu`        | Video card         |
+| `memory`     | RAM                |
+| `gpu_driver` | Video card driver  |
+| `disk`       | Disk               |
+| `battery`    | Battery            |
+| `font`       | Font               |
+| `song`       | Song               |
+| `local_ip`   | Local IP address   |
+| `public_ip`  | Public IP address  |
+| `users`      | User               |
+| `locale`     | Locale             |
+| `cols`       | Color blocks       |
 
 :::
 
-### Заголовок
+### Title
 
-**Скрыть/показать полное доменное имя**
+**Hide/Show FQDN**
 
-| Флаг           | Значения    |
+| Flag           | Value       |
 | :------------- | :---------- |
 | `--title_fqdn` | `on`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 title_fqdn="off"
 ```
 
@@ -273,11 +273,11 @@ title_fqdn="off"
 
 :::
 
-### Ядро
+### Kernel
 
-**Сократить выходные данные функции kernel**
+**Shorten kernel function output**
 
-| Флаг                 | Значения    |
+| Flag                 | Value       |
 | :------------------- | :---------- |
 | `--kernel_shorthand` | `on`, `off` |
 
@@ -302,7 +302,7 @@ Uptime: 1 hour, 32 mins
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 kernel_shorthand="on"
 ```
 
@@ -312,17 +312,17 @@ kernel_shorthand="off"
 
 :::
 
-### Дистрибутив
+### Distribution
 
-**Сократить выходные данные функции distro**
+**Shorten the output of the distro function**
 
-| Флаг                 | Значения            |
+| Flag                 | Value               |
 | :------------------- | :------------------ |
 | `--distro_shorthand` | `on`, `tiny`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 distro_shorthand="off"
 ```
 
@@ -332,9 +332,9 @@ distro_shorthand="off"
 
 :::
 
-**Скрыть/показать архитектуру OS**
+**Hide/Show OS Architecture**
 
-| Флаг        | Значения    |
+| Flag        | Value       |
 | :---------- | :---------- |
 | `--os_arch` | `on`, `off` |
 
@@ -361,7 +361,7 @@ Kernel: 6.8.8-6.8-alt1
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 os_arch="on"
 ```
 
@@ -371,11 +371,11 @@ os_arch="on"
 
 :::
 
-### Время работы
+### Opening hours
 
-**Сократить выходные данные функции uptime**
+**Shorten uptime function output**
 
-| Флаг                 | Значения            |
+| Flag                 | Value               |
 | :------------------- | :------------------ |
 | `--uptime_shorthand` | `on`, `tiny`, `off` |
 
@@ -414,7 +414,7 @@ Shell: zsh 5.9
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 uptime_shorthand="on"
 ```
 
@@ -424,11 +424,11 @@ uptime_shorthand="on"
 
 :::
 
-### Память
+### Memory
 
-**Скрыть/показать процент использования**
+**Hide/show usage percentage**
 
-| Флаг               | Значения    |
+| Flag               | Value       |
 | :----------------- | :---------- |
 | `--memory_percent` | `on`, `off` |
 
@@ -457,7 +457,7 @@ GPU: AMD ATI Radeon RX 580 2048SP
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 memory_percent="off"
 ```
 
@@ -467,9 +467,9 @@ memory_percent="on"
 
 :::
 
-**Изменить единицы вывода памяти**
+**Change Memory Output Units**
 
-| Флаг            | Значения            |
+| Flag            | Value               |
 | :-------------- | :------------------ |
 | `--memory_unit` | `kib`, `mib`, `gib` |
 
@@ -508,7 +508,7 @@ GPU: AMD ATI Radeon RX 580 2048SP
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 memory_unit="mib"
 ```
 
@@ -518,11 +518,11 @@ memory_unit="mib"
 
 :::
 
-### Пакеты
+### Packages
 
-**Скрыть/показать имена пакетных менеджеров**
+**Hide/show package manager names**
 
-| Флаг                 | Значения           |
+| Flag                 | Value              |
 | :------------------- | :----------------- |
 | `--package_managers` | `on`, `tiny` `off` |
 
@@ -561,7 +561,7 @@ Resolution: 1920x1080
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 package_managers="tiny"
 ```
 
@@ -571,11 +571,11 @@ package_managers="on"
 
 :::
 
-### Оболочка ($SHELL)
+### Shell ($SHELL)
 
-**Скрыть/показать путь к оболочке**
+**Hide/show shell path**
 
-| Флаг           | Значения    |
+| Flag           | Value       |
 | :------------- | :---------- |
 | `--shell_path` | `on`, `off` |
 
@@ -604,7 +604,7 @@ DE: GNOME 46.1
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 shell_path="off"
 ```
 
@@ -614,9 +614,9 @@ shell_path="off"
 
 :::
 
-**Скрыть/показать версию**
+**Hide/show version**
 
-| Флаг              | Значения    |
+| Flag              | Value       |
 | :---------------- | :---------- |
 | `--shell_version` | `on`, `off` |
 
@@ -645,7 +645,7 @@ DE: GNOME 46.1
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 shell_version="on"
 ```
 
@@ -655,11 +655,11 @@ shell_version="on"
 
 :::
 
-### Окружение рабочего стола
+### Desktop environment
 
-**Скрыть/показать версию**
+**Hide/show version**
 
-| Флаг           | Значения    |
+| Flag           | Value       |
 | :------------- | :---------- |
 | `--de_version` | `on`, `off` |
 
@@ -688,7 +688,7 @@ WM Theme: Adwaita
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 de_version="on"
 ```
 
@@ -698,19 +698,19 @@ de_version="on"
 
 :::
 
-### Процессор
+### Processor
 
-**Тип частоты**
+**Frequency type**
 
-| Флаг           | Значения                                                                 |
+| Flag           | Value                                                                    |
 | :------------- | :----------------------------------------------------------------------- |
 | `--speed_type` | `scaling_cur_freq`, `scaling_min_freq`, `scaling_max_freq`, `bios_limit` |
 
-<!-- На всех значениях у меня был один и тот же вывод :( -->
+<!-- On all values ​​I had the same output :( -->
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 speed_type="bios_limit"
 ```
 
@@ -720,9 +720,9 @@ speed_type="scaling_cur_freq"
 
 :::
 
-**Сократить частоту**
+**Reduce frequency**
 
-| Флаг                | Значения     |
+| Flag                | Value        |
 | :------------------ | :----------- |
 | `--speed_shorthand` | `on`, `off`. |
 
@@ -753,7 +753,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 speed_shorthand="off"
 ```
 
@@ -763,9 +763,9 @@ speed_shorthand="on"
 
 :::
 
-**Скрыть/показать бренд**
+**Hide/show brand**
 
-| Флаг          | Значения    |
+| Flag          | Value       |
 | :------------ | :---------- |
 | `--cpu_brand` | `on`, `off` |
 
@@ -796,7 +796,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 cpu_brand="on"
 ```
 
@@ -806,9 +806,9 @@ cpu_brand="off"
 
 :::
 
-**Скрыть/показать частоту**
+**Hide/show frequency**
 
-| Флаг          | Значения    |
+| Flag          | Value       |
 | :------------ | :---------- |
 | `--cpu_speed` | `on`, `off` |
 
@@ -839,7 +839,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 cpu_speed="on"
 ```
 
@@ -849,9 +849,9 @@ cpu_speed="on"
 
 :::
 
-**Скрыть/показать ядра**
+**Hide/Show Cores**
 
-| Флаг          | Значения                     |
+| Flag          | Value                        |
 | :------------ | :--------------------------- |
 | `--cpu_cores` | `logical`, `physical`, `off` |
 
@@ -893,7 +893,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 cpu_cores="logical"
 ```
 
@@ -903,9 +903,9 @@ cpu_cores="logical"
 
 :::
 
-**Скрыть/показать температуру**
+**Hide/show temperature**
 
-| Флаг         | Значения        |
+| Flag         | Value           |
 | :----------- | :-------------- |
 | `--cpu_temp` | `C`, `F`, `off` |
 
@@ -947,7 +947,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 cpu_temp="off"
 ```
 
@@ -957,11 +957,11 @@ cpu_temp="C"
 
 :::
 
-### Графический процессор
+### GPU
 
-**Скрыть/показать бренд**
+**Hide/show brand**
 
-| Флаг          | Значения    |
+| Flag          | Value       |
 | :------------ | :---------- |
 | `--gpu_brand` | `on`, `off` |
 
@@ -990,7 +990,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 gpu_brand="on"
 ```
 
@@ -1000,9 +1000,9 @@ gpu_brand="off"
 
 :::
 
-**Какой отображать**
+**Which to display**
 
-| Флаг         | Значения                         |
+| Flag         | Value                            |
 | :----------- | :------------------------------- |
 | `--gpu_type` | `all`, `dedicated`, `integrated` |
 
@@ -1039,7 +1039,7 @@ Memory: 7897MiB / 15982MiB
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 gpu_type="all"
 ```
 
@@ -1049,11 +1049,11 @@ gpu_type="all"
 
 :::
 
-### Разрешение
+### Permission
 
-**Скрыть/показать частоту обновления**
+**Hide/Show refresh rate**
 
-| Флаг             | Значения    |
+| Flag             | Value       |
 | :--------------- | :---------- |
 | `--refresh_rate` | `on`, `off` |
 
@@ -1084,7 +1084,7 @@ WM: Mutter
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 refresh_rate="off"
 ```
 
@@ -1094,11 +1094,11 @@ refresh_rate="on"
 
 :::
 
-### Gtk темы / иконки / шрифты
+### Gtk themes / icons / fonts
 
-**Сократить вывод**
+**Shorten output**
 
-| Флаг              | Значения    |
+| Flag              | Value       |
 | :---------------- | :---------- |
 | `--gtk_shorthand` | `on`, `off` |
 
@@ -1129,7 +1129,7 @@ Terminal: kgx
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 gtk_shorthand="off"
 ```
 
@@ -1139,9 +1139,9 @@ gtk_shorthand="off"
 
 :::
 
-**Скрыть/показать gtk2**
+**Hide/Show gtk2**
 
-| Флаг     | Значения    |
+| Flag     | Value       |
 | :------- | :---------- |
 | `--gtk2` | `on`, `off` |
 
@@ -1172,7 +1172,7 @@ Terminal: kgx
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 gtk2="on"
 ```
 
@@ -1182,9 +1182,9 @@ gtk2="on"
 
 :::
 
-**Скрыть/показать gtk3**
+**Hide/Show gtk3**
 
-| Флаг     | Значения    |
+| Flag     | Value       |
 | :------- | :---------- |
 | `--gtk3` | `on`, `off` |
 
@@ -1215,7 +1215,7 @@ Terminal: kgx
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 gtk3="on"
 ```
 
@@ -1225,17 +1225,17 @@ gtk3="on"
 
 :::
 
-### IP-адрес
+### IP address
 
-**Сайт для проверки IP-адреса**
+**Website for checking IP address**
 
-| Флаг        | Значения |
-| :---------- | :------- |
-| `--ip_host` | `url`    |
+| Flag        | Value |
+| :---------- | :---- |
+| `--ip_host` | `url` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 public_ip_host="http://ident.me"
 ```
 
@@ -1245,15 +1245,15 @@ public_ip_host="http://ident.me"
 
 :::
 
-**Тайм-аут публичного IP-адреса**
+**Public IP Timeout**
 
-| Флаг           | Значения |
-| :------------- | :------- |
-| `--ip_timeout` | `int`    |
+| Flag           | Value |
+| :------------- | :---- |
+| `--ip_timeout` | `int` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 public_ip_timeout=2
 ```
 
@@ -1263,11 +1263,11 @@ public_ip_timeout=1
 
 :::
 
-### Диск
+###Disk
 
-**Какие диски отображать**
+**Which drives to display**
 
-| Флаг          | Значения                           |
+| Flag          | Value                              |
 | :------------ | :--------------------------------- |
 | `--disk_show` | `/`, `/dev/sdXX`, `/path/to/drive` |
 
@@ -1297,7 +1297,7 @@ Local IP: 192.168.31.154
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 disk_show=("/")
 ```
 
@@ -1307,9 +1307,9 @@ disk_show=("/" "/run/media/fiersik/games")
 
 :::
 
-##### Какую подсказку отображать.
+##### Which tooltip to display.
 
-| Флаг              | Значения                       |
+| Flag              | Value                          |
 | :---------------- | :----------------------------- |
 | `--disk_subtitle` | `mount`, `name`, `dir`, `none` |
 
@@ -1362,7 +1362,7 @@ Local IP: 192.168.31.154
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 disk_subtitle="mount"
 ```
 
@@ -1372,9 +1372,9 @@ disk_subtitle="dir"
 
 :::
 
-**Скрыть/показать процент использования**
+**Hide/show usage percentage**
 
-| Флаг             | Значения    |
+| Flag             | Value       |
 | :--------------- | :---------- |
 | `--disk_percent` | `on`, `off` |
 
@@ -1403,7 +1403,7 @@ Local IP: 192.168.31.154
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 disk_percent="on"
 ```
 
@@ -1413,15 +1413,15 @@ disk_percent="on"
 
 :::
 
-### Музыка
+### Music
 
-**Музыкальный проигрыватель**
+**Music player**
 
-| Флаг             | Значения              |
+| Flag             | Value                 |
 | :--------------- | :-------------------- |
 | `--music_player` | `auto`, `player-name` |
 
-::: details Музыкальные проигрыватели.
+::: details Music players.
 
 | `amarok`        | `audacious`           | `banshee`    | `bluemindo`           |
 | :-------------- | :-------------------- | :----------- | :-------------------- |
@@ -1440,7 +1440,7 @@ disk_percent="on"
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 music_player="auto"
 ```
 
@@ -1450,9 +1450,9 @@ music_player="auto"
 
 :::
 
-**Формат отображения информации**
+**Information display format**
 
-| Флаг            | Значения                         |
+| Flag            | Value                            |
 | :-------------- | :------------------------------- |
 | `--song_format` | `%artist%`, `%album%`, `%title%` |
 
@@ -1471,7 +1471,7 @@ Local IP: 192.168.31.154
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 song_format="%artist% - %album% - %title%"
 ```
 
@@ -1481,9 +1481,9 @@ song_format="%artist% - %album% - %title%"
 
 :::
 
-**Вывести в отдельных строках**
+**Output on separate lines**
 
-| Флаг               | Значения    |
+| Flag               | Value       |
 | :----------------- | :---------- |
 | `--song_shorthand` | `on`, `off` |
 
@@ -1515,7 +1515,7 @@ Local IP: 192.168.31.154
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 song_shorthand="off"
 ```
 
@@ -1525,24 +1525,24 @@ song_shorthand="off"
 
 :::
 
-### Цвета текста
+### Text colors
 
-| Флаг       | Значения                                      |
+| Flag       | Value                                         |
 | :--------- | :-------------------------------------------- |
 | `--colors` | `distro`, `num` `num` `num` `num` `num` `num` |
 
-| Порядок | Часть вывода           |
-| :-----: | :--------------------- |
-|    1    | Заголовок              |
-|    2    | Разделитель домена     |
-|    3    | Подчеркивание          |
-|    4    | Подзаголовок           |
-|    5    | Разделитель информации |
-|    5    | Информация             |
+| Order | Output part      |
+| :---: | :--------------- |
+|   1   | Title            |
+|   2   | Domain separator |
+|   3   | Underline        |
+|   4   | Subtitle         |
+|   5   | Separator        |
+|   5   | Information      |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 colors=(distro)
 ```
 
@@ -1552,17 +1552,17 @@ colors=(distro)
 
 :::
 
-### Параметры текста
+### Text Options
 
-**Жирный шрифт**
+**Bold type**
 
-| Флаг     | Значения    |
+| Flag     | Value       |
 | :------- | :---------- |
 | `--bold` | `on`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 bold="on"
 ```
 
@@ -1572,9 +1572,9 @@ bold="on"
 
 :::
 
-**Подчёркивание домена**
+**Domain underscore**
 
-| Флаг          | Значения    |
+| Flag          | Value       |
 | :------------ | :---------- |
 | `--underline` | `on`, `off` |
 
@@ -1603,7 +1603,7 @@ ptime: 1 hour, 14 mins
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 underline_enabled="on"
 ```
 
@@ -1613,9 +1613,9 @@ underline_enabled="on"
 
 :::
 
-**Символ разделителя домена**
+**Domain separator character**
 
-| Флаг               | Значения |
+| Flag               | Value    |
 | :----------------- | :------- |
 | `--underline_char` | `string` |
 
@@ -1644,7 +1644,7 @@ Uptime: 1 hour, 34 mins
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 underline_char="-"
 ```
 
@@ -1654,9 +1654,9 @@ underline_char="-"
 
 :::
 
-**Символ разделителя информации**
+**Information separator character**
 
-| Флаг          | Значения |
+| Flag          | Value    |
 | :------------ | :------- |
 | `--separator` | `string` |
 
@@ -1685,7 +1685,7 @@ Uptime 1 hour, 34 mins
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 separator=":"
 ```
 
@@ -1695,17 +1695,17 @@ separator=" "
 
 :::
 
-### Цветные блоки
+### Color blocks
 
-**Диапазон цветов**
+**Color range**
 
-| Флаг            | Значения     |
+| Flag            | Value        |
 | :-------------- | :----------- |
 | `--block_range` | `num`, `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 block_range=(1 16)
 ```
 
@@ -1715,10 +1715,10 @@ block_range=(1 18)
 
 :::
 
-**Пользовательские цвета**
+**Custom Colors**
 
 ::: info
-Данный подблок не является обязательным и отсутствует в конфигурации по умолчанию. Он необходим для удобной настройки собственных цветов вывода информации.
+This subblock is optional and is not included in the default configuration. It is necessary for conveniently setting your own colors for displaying information.
 :::
 
 ::: code-group
@@ -1750,15 +1750,15 @@ cl10="${bgwhite}"
 
 :::
 
-**Скрыть/показать цветовые блоки**
+**Hide/Show Color Blocks**
 
-| Флаг             | Значения    |
+| Flag             | Value       |
 | :--------------- | :---------- |
 | `--color_blocks` | `on`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 color_blocks="on"
 ```
 
@@ -1768,15 +1768,15 @@ color_blocks="off"
 
 :::
 
-**Ширина блока**
+**Block width**
 
-| Флаг            | Значения |
-| :-------------- | :------- |
-| `--block_width` | `num`    |
+| Flag            | Value |
+| :-------------- | :---- |
+| `--block_width` | `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 block_width=3
 ```
 
@@ -1786,15 +1786,15 @@ block_width=0
 
 :::
 
-**Высота блока**
+**Block height**
 
-| Флаг             | Значения |
-| :--------------- | :------- |
-| `--block_height` | `num`    |
+| Flag             | Value |
+| :--------------- | :---- |
+| `--block_height` | `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 block_height=1
 ```
 
@@ -1804,15 +1804,15 @@ block_height=0
 
 :::
 
-**Смещение блоков от левой части**
+**Offset of blocks from the left side**
 
-| Флаг           | Значения      |
+| Flag           | Value         |
 | :------------- | :------------ |
 | `--col_offset` | `auto`, `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 col_offset="auto"
 ```
 
@@ -1824,11 +1824,11 @@ col_offset="auto"
 
 col_offset="auto"
 
-### Индикаторы выполнения
+### Progress bars
 
-**Отображение информации**
+**Display information**
 
-| Флаг                | Значения                           |
+| Flag                | Value                              |
 | :------------------ | :--------------------------------- |
 | `--cpu_display`     | `bar`, `infobar`, `barinfo`, `off` |
 | `--memory_display`  | `bar`, `infobar`, `barinfo`, `off` |
@@ -1881,7 +1881,7 @@ CPU Usage: 10%
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 cpu_display="off"
 memory_display="off"
 battery_display="off"
@@ -1897,9 +1897,9 @@ disk_display="off"
 
 :::
 
-**Символы бара**
+**Bar char**
 
-| Флаг         | Значения          |
+| Flag         | Value             |
 | :----------- | :---------------- |
 | `--bar_char` | `string` `string` |
 
@@ -1928,7 +1928,7 @@ CPU Usage: 9%
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 bar_char_elapsed="-"
 bar_char_total="="
 ```
@@ -1940,9 +1940,9 @@ bar_char_total=""
 
 :::
 
-**Скрыть/показать границы индикатора выполнения**
+**Hide/Show Progress Bar Borders**
 
-| Флаг           | Значения    |
+| Flag           | Value       |
 | :------------- | :---------- |
 | `--bar_border` | `on`, `off` |
 
@@ -1971,7 +1971,7 @@ CPU Usage: 9%
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 bar_border="on"
 ```
 
@@ -1981,11 +1981,11 @@ bar_border="off"
 
 :::
 
-**Ширина индикатора выполнения**
+**Progress bar length**
 
-| Флаг           | Значения |
-| :------------- | :------- |
-| `--bar_length` | `num`    |
+| Flag           | Value |
+| :------------- | :---- |
+| `--bar_length` | `num` |
 
 ::: tabs
 == 10
@@ -2012,7 +2012,7 @@ CPU Usage: 9%
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 bar_length=15
 ```
 
@@ -2022,15 +2022,15 @@ bar_length=0
 
 :::
 
-**Цвета индикатора выполнения**
+**Progress Bar Colors**
 
-| Флаг           | Значения        |
+| Flag           | Value           |
 | :------------- | :-------------- |
 | `--bar_colors` | `distro`, `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 bar_color_elapsed="distro"
 bar_color_total="distro"
 ```
@@ -2042,15 +2042,15 @@ bar_color_total="distro"
 
 :::
 
-### Настройки бэкенда
+### Backend settings
 
-**Сервер изображений**
+**Image Server**
 
-| Флаг        | Значения              |
+| Flag        | Value                 |
 | :---------- | :-------------------- |
 | `--backend` | `backend_name`, `off` |
 
-::: details Возможные значения
+::: details Possible values
 
 | `ascii`   | `caca`    |
 | :-------- | :-------- |
@@ -2064,7 +2064,7 @@ bar_color_total="distro"
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 image_backend="ascii"
 ```
 
@@ -2074,15 +2074,15 @@ image_backend="ascii"
 
 :::
 
-**Источник изображения**
+**Image Source**
 
-| Флаг       | Значения                                                       |
+| Flag       | Value                                                          |
 | :--------- | :------------------------------------------------------------- |
 | `--source` | `auto`, `ascii`, `wallpaper`, `/path/to/file`, `/path/to/dir/` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 image_source="auto"
 ```
 
@@ -2092,17 +2092,17 @@ image_source="auto"
 
 :::
 
-### Параметры ASCII
+### ASCII options
 
-**Дистрибутив**
+**Distribution**
 
-| Флаг             | Значения              |
+| Flag             | Value                 |
 | :--------------- | :-------------------- |
 | `--ascii_distro` | `auto`, `distro_name` |
 
-::: details Возможные значения
+::: details Possible values
 
-| Стандартные         | Уменьшенные        | Ретро         |
+| Default             | Small              | Retro         |
 | :------------------ | :----------------- | :------------ |
 | AIX                 | Alpine_small       | Arch_old      |
 | Anarchy             | Arch_small         | Ubuntu_old    |
@@ -2285,7 +2285,7 @@ image_source="auto"
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 ascii_distro="auto"
 ```
 
@@ -2295,15 +2295,15 @@ ascii_distro="ALT_GNOME"
 
 :::
 
-**Цвета ASCII**
+**ASCII Colors**
 
-| Флаг             | Значения                            |
+| Flag             | Value                               |
 | :--------------- | :---------------------------------- |
 | `--ascii_colors` | `num` `num` `num` `num` `num` `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 ascii_colors=(distro)
 ```
 
@@ -2313,15 +2313,15 @@ ascii_colors=(distro)
 
 :::
 
-**Выделять ASCII-логотип полужирным**
+**Make ASCII logo bold**
 
-| Флаг           | Значения    |
+| Flag           | Value       |
 | :------------- | :---------- |
 | `--ascii_bold` | `on`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 ascii_bold="on"
 ```
 
@@ -2331,21 +2331,21 @@ ascii_bold="on"
 
 :::
 
-### Параметры изображения
+### Image Options
 
-**Перерисовка**
+**Redraw**
 
 ::: info
-Если значение `on`, Neofetch будет постоянно перерисовывать изображение до тех пор, пока нажато сочетание клавиш [[Ctrl]] + [[C]]. Это устраняет проблемы с отображением в некоторых эмуляторах терминалов.
+If set to `on`, Neofetch will continually redraw the image as long as [[Ctrl]] + [[C]] is pressed. This resolves display issues in some terminal emulators.
 :::
 
-| Флаг     | Значения    |
+| Flag     | Value       |
 | :------- | :---------- |
 | `--loop` | `on`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 image_loop="off"
 ```
 
@@ -2355,15 +2355,15 @@ image_loop="off"
 
 :::
 
-**Каталог миниатюр**
+**Catalog of miniatures**
 
-| Значения |
-| :------- |
-| `dir`    |
+| Value |
+| :---- |
+| `dir` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 thumbnail_dir="~/.cache/thumbnails/neofetch"
 ```
 
@@ -2373,15 +2373,15 @@ thumbnail_dir="${XDG_CACHE_HOME:-${HOME}/.cache}/thumbnails/neofetch"
 
 :::
 
-**Режим обрезки**
+**Crop Mode**
 
-| Флаг          | Значения                |
+| Flag          | Value                   |
 | :------------ | :---------------------- |
 | `--crop_mode` | `normal`, `fit`, `fill` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 crop_mode="normal"
 ```
 
@@ -2391,17 +2391,17 @@ crop_mode="normal"
 
 :::
 
-**Смещение**
+**Offset**
 
 ::: warning
-Влияет только на режим `normal`.
+Only affects `normal` mode.
 :::
 
-| Флаг            | Значения |
-| :-------------- | :------- |
-| `--crop_offset` | `mode`   |
+| Flag            | Value  |
+| :-------------- | :----- |
+| `--crop_offset` | `mode` |
 
-::: details Режимы:
+::: details Modes:
 
 | `northwest` | `north`  | `northeast` |
 | :---------- | :------- | :---------- |
@@ -2412,7 +2412,7 @@ crop_mode="normal"
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 crop_offset="center"
 ```
 
@@ -2422,15 +2422,15 @@ crop_offset="center"
 
 :::
 
-**Размер изображения**
+**Image Size**
 
-| Флаги                    | Значения                      |
+| Flags                    | Value                         |
 | :----------------------- | :---------------------------- |
 | `--image_size`, `--size` | `auto`, `00px`, `00%`, `none` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 image_size="auto"
 ```
 
@@ -2440,15 +2440,15 @@ image_size="auto"
 
 :::
 
-**Разрыв между изображением и текстом**
+**Gap between image and text**
 
-| Флаг    | Значения      |
+| Flag    | Value         |
 | :------ | :------------ |
 | `--gap` | `num`, `-num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 gap=3
 ```
 
@@ -2458,19 +2458,19 @@ gap=2
 
 :::
 
-**Смещение изображений**
+**Image offset**
 
 ::: warning
-Работает только с `w3m`.
+Works only with `w3m`.
 :::
 
-| Флаг                     | Значения |
-| :----------------------- | :------- |
-| `--xoffset`, `--yoffset` | `num`    |
+| Flag                     | Value |
+| :----------------------- | :---- |
+| `--xoffset`, `--yoffset` | `num` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 yoffset=0
 xoffset=0
 ```
@@ -2482,19 +2482,19 @@ xoffset=0
 
 :::
 
-**Цвет фона**
+**Background color**
 
 ::: warning
-Работает только с `w3m`.
+Works only with `w3m`.
 :::
 
-| Флаг         | Значения |
-| :----------- | :------- |
-| `--bg_color` | `color`  |
+| Flag         | Value   |
+| :----------- | :------ |
+| `--bg_color` | `color` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 background_color=" "
 ```
 
@@ -2504,21 +2504,21 @@ background_color=" "
 
 :::
 
-### Другие опции
+### Other options
 
-**Стандартный режим вывода**
+**Standard output mode**
 
 ::: info
-Отключает все цвета. Полезно для перехода в другую команду.
+Disables all colors. Useful for moving to another team.
 :::
 
-| Значения    |
+| Value       |
 | :---------- |
 | `on`, `off` |
 
 ::: code-group
 
-```shell[По умолчанию]
+```shell[Default]
 stdout="off"
 ```
 
