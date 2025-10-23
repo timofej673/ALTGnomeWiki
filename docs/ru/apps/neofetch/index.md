@@ -22,8 +22,8 @@ appstream:
         font-family: "FiraCode Nerd Font";
         src: url("/neofetch/neofetch-fiersik-font.ttf");
     }
-    code[data-v-4f34940d] {
-            font-family: 'FiraCode Nerd Font' !important;
+    code {
+        font-family: 'FiraCode Nerd Font' !important;
     }
 </style>
 
@@ -72,7 +72,7 @@ Neofetch имеет довольно гибкую конфигурацию, и �
 Основная визуальная часть настраивается в данной функции.
 
 ::: tabs
-== по умолчанию
+== По умолчанию
 
 ```shell
 print_info() {
@@ -224,7 +224,7 @@ WM: Mutter
 | `title`      | Заголовок (user@host) |
 | `underline`  | Разделительная черта  |
 | `distro`     | Дистрибутив           |
-| `model`      | Модель пк             |
+| `model`      | Модель ПК             |
 | `kernel`     | Ядро                  |
 | `uptime`     | Время работы          |
 | `packages`   | Пакеты                |
@@ -2092,7 +2092,7 @@ image_source="auto"
 
 :::
 
-### Параметры Ascii
+### Параметры ASCII
 
 **Дистрибутив**
 
