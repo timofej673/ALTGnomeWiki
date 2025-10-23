@@ -117,18 +117,9 @@ epm play --remove telegram
 
 Возможно удалить приложение используя пакетный менеджер:
 
-::: code-group
-
-```shell[apt-get]
-su -
-apt-get remove Telegram
-```
-
 ```shell[epm]
 epm -e Telegram
 ```
-
-:::
 
 ### Обновить приложение до последней версии
 
