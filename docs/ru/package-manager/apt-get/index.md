@@ -12,7 +12,7 @@ Advanced packaging tool — программа для установки, обн
 
 Все операции с пакетами проводятся в терминале при помощи пакетного менеджера. Для большинства команд пакетного менеджера нужны права суперпользователя. Хотя, для операции поиска, достаточно обычных прав пользователя.
 
-В семействе операционных систем Альт используется <mark>порт-версия пакетного менеджера АРТ</mark>, который был модифицирован для работы с менеджером пакетов RPM. В базовой конфигурации пакетного менеджера APT обновление ядра отключено. Чтобы обновить ядро, нужно использовать терминальную команду `update-kernel` или единую команду управления пакетами `epm`. Для управления списком репозиториев APT используется утилита `apt-repo`. Схема добавления репозиториев <mark>имеет свои отличительные особенности связи с поддержкой RPM-пакетов</mark>.
+В семействе операционных систем Альт используется <mark>порт-версия пакетного менеджера АРТ</mark>, который был модифицирован для работы с менеджером пакетов RPM. В базовой конфигурации пакетного менеджера APT обновление ядра отключено. Чтобы обновить ядро, нужно использовать терминальную команду `update-kernel`. Для управления списком репозиториев APT используется утилита `apt-repo`. Схема добавления репозиториев <mark>имеет свои отличительные особенности связи с поддержкой RPM-пакетов</mark>.
 
 ## Обновление информации о репозиториях
 
@@ -48,19 +48,11 @@ apt-get update
 
 Чтобы обновить систему до актуального состояния, используйте следующую команду:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-get update
 apt-get dist-upgrade
 ```
-
-```shell[epm]
-epm upgrade
-```
-
-:::
 
 :::info
 В операционных системах семейства Альт пакетный менеджер (APT) автоматически не обновляет ядро вместе с обновлением системы, поскольку обновление такого критичного компонента системы может привести к нежелательным последствиям.
@@ -70,35 +62,19 @@ epm upgrade
 
 Установка пакета производится следующей командой:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-get update
 apt-get install firefox
 ```
 
-```shell[epm]
-epm -i firefox
-```
-
-:::
-
 Вы можете указать сразу несколько пакетов через пробел:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-get update
 apt-get install firefox chromium
 ```
-
-```shell[epm]
-epm -i firefox chromium
-```
-
-:::
 
 :::info
 Обратите внимание, когда устанавливаются несколько пакетов, действие нужно подтвердить нажатием клавиши Y
@@ -108,35 +84,19 @@ epm -i firefox chromium
 
 Удаление пакета производится следующей командой:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-get update
 apt-get remove firefox
 ```
 
-```shell[epm]
-epm -e firefox
-```
-
-:::
-
 Для удаления двух и более пакетов необходимо написать их названия через пробел:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-get update
 apt-get remove firefox chromium
 ```
-
-```shell[epm]
-epm -e firefox chromium
-```
-
-:::
 
 Удаление неиспользуемых пакетов:
 
@@ -164,22 +124,13 @@ apt-get remove -D пакет
 
 Для поиска пакета в репозитории по названию или описанию:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 apt-cache search telegram
 ```
 
-```shell[epm]
-epm search telegram
-```
-
-:::
-
 ::: details Нажмите для отображения кода
-::: code-group
 
-```shell[apt-get]
+```shell
 cutegram - Cutegram is a telegram client by Aseman Land
 libqtelegram-ae - Most powerfull telegram library that created using C++ and Qt.
 libqtelegram-ae-devel - Development files for libqtelegram-ae
@@ -217,36 +168,6 @@ python3-module-yt_dlp - Python 3 module for yt-dlp
 zabbix-in-telegram - Zabbix Notifications with graphs in Telegram
 ```
 
-```shell[epm]
-cutegram - Cutegram is a telegram client by Aseman Land
-libqtelegram-ae - Most powerfull telegram library that created using C++ and Qt.
-libqtelegram-ae-devel - Development files for libqtelegram-ae
-libtgvoip - VoIP library for Telegram clients
-purple-telegram - Libpurple protocol plugin for Telegram support
-tdlib - Cross-platform library for building Telegram clients
-telegram-bot-api - The Telegram Bot API provides an HTTP API for creating Telegram Bots.
-telegram-desktop - Telegram Desktop messaging app
-libtelegram-qt5 - Qt library for Telegram network
-libtelegram-qt5-devel - Development headers and pkg-config for TelegramQt library
-telegramqml - Telegram API tools for QtQml and Qml
-telepathy-morse - Morse is a Qt-based Telegram connection manager for the Telepathy framework.
-tgsend - Simple Telegram bot sender
-i586-libqtelegram-ae - Most powerfull telegram library that created using C++ and Qt.
-i586-libqtelegram-ae-devel - Development files for libqtelegram-ae
-i586-libtelegram-qt5 - Qt library for Telegram network
-i586-libtelegram-qt5-devel - Development headers and pkg-config for TelegramQt library
-i586-libtgvoip - VoIP library for Telegram clients
-i586-purple-telegram - Libpurple protocol plugin for Telegram support
-i586-telegramqml - Telegram API tools for QtQml and Qml
-python3-module-Telethon - Pure Python 3 Telegram client library
-python3-module-pyrogram - Elegant, modern and asynchronous Telegram MTProto API framework in Python for users and bots
-python3-module-telebot - Python Telegram bot api
-python3-module-telegram-bot - Python interface for the Telegram Bot API
-zabbix-in-telegram - Zabbix Notifications with graphs in Telegram
-64gram - 64Gram (unofficial Telegram Desktop) (use 'epm play' to install it)
-telegram - Telegram client from the official site (use 'epm play' to install it)
-```
-
 :::
 
 Для поиска только по названию пакета:
@@ -271,68 +192,35 @@ apt-repo — утилита для управления списком репо�
 
 Вывод текущих репозиториев:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 apt-repo
 ```
 
-```shell[epm]
-epm repo
-```
-
-:::
-
 ::: details Нажмите для отображения кода
 
-::: code-group
-
-```shell[apt-get]
+```shell
 rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux Sisyphus/x86_64 classic
 rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux Sisyphus/x86_64-i586 classic
 rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux Sisyphus/noarch classic
-```
-
-```shell[epm]
-/etc/apt/sources.list.d/alt.list:
-    rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux Sisyphus/x86_64 classic
-    rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux Sisyphus/x86_64-i586 classic
-    rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux Sisyphus/noarch classic
 ```
 
 :::
 
 Чтобы добавить репозитории конкретной задачи, выполните следующую команду:
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-repo add 329850
 ```
-
-```shell[epm]
-epm repo add 329850
-```
-
-:::
 
 <!--
 
 Установка всех доступных пакетов (`*-devel`, `*-checkinstall`, `*-debuginfo`), связанных с задачей
 
-::: code-group
-
-```shell[apt-get]
+```shell
 su -
 apt-repo test task 329850
 ```
-
-```shell[epm]
-epm install task 329850
-```
-
-:::
 
 -->
 
@@ -351,7 +239,3 @@ su -
 apt-repo rm task 329850
 apt-get update
 ```
-
-:::info
-При установке через epm задание после его окончания, исключается из списка репозиторий автоматически.
-:::
