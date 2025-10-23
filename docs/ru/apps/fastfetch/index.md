@@ -19,9 +19,6 @@ appstream:
 
 Fastfetch — инструмент для вывода системной информации и отображения её в привлекательном виде, похож на [Neofetch](/apps/neofetch/). Он написан в основном на C с учётом производительности и настраиваемости. В настоящее время поддерживаются Linux, Android, FreeBSD, macOS и Windows 7 (или более поздние версии).
 
-<<<<<<< HEAD:docs/ru/apps/fastfetch/index.md
-<!--@include: @ru/apps/.parts/install/content-repo.md-->
-=======
 ![Fastfetch](/fastfetch/fastfetch-1.png)
 
 ## Установка из репозитория
@@ -41,4 +38,4 @@ epm -i fastfetch
 ```
 
 :::
->>>>>>> fef604ae (docs: add Linux Theme Store, Gradia and lot of fixes for other (#705)):docs/apps/fastfetch.md
+
