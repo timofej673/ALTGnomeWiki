@@ -21,6 +21,7 @@ meta:
     sisyphus: Sisyphus
     flatpak: Flapak
     snap: Snap
+    aides: Aides
     extension: GNOME Extensions
     more: More
 member:

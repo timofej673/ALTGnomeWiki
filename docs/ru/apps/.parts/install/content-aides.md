@@ -2,15 +2,15 @@
 search: false
 ---
 
-## Установка c помощью Stapler <Badge v-if="$frontmatter?.aggregation?.stplr?.build === 'unofficial'" type="danger" text="Неофициальная сборка" />
+## Установка из репозитория Aides <Badge v-if="$frontmatter?.aggregation?.aides?.build === 'unofficial'" type="danger" text="Неофициальная сборка" />
 
 При наличии пакета [stplr](/package-manager/stplr/), можно установить **{{ $frontmatter?.appstream?.name }}** одной командой:
 
 ```shell-vue
-stplr in {{ $frontmatter?.aggregation?.stplr?.id }}
+stplr in {{ $frontmatter?.aggregation?.aides?.id }}
 ```
 
-Для установки пакета **{{ $frontmatter?.appstream?.name }}**, необходимо подключить репозиторий **Aides**:
+Если репозиторий Aides ещё не подключён, добавьте его следующей командой:
 
 ```sh
 stplr repo add aides https://altlinux.space/aides-community/aides.git

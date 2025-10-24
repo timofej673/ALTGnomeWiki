@@ -15,9 +15,9 @@ export type MetaKeywordKey =
 
 export type MetaKeywordType = 'info' | 'success' | 'tip' | 'danger' | 'warning' | 'success-1'
 
-export type MetaActionKey = 'sisyphus' | 'flatpak' | 'snap' | 'extension' | 'more'
+export type MetaActionKey = 'sisyphus' | 'flatpak' | 'snap' | 'aides' | 'extension' | 'more'
 
-export type MetaActionsTheme = 'sisyphus' | 'flatpak' | 'snap' | 'extension' | 'more'
+export type MetaActionsTheme = 'sisyphus' | 'flatpak' | 'snap' | 'aides' | 'extension' | 'more'
 
 export type MetaKeyword = Record<MetaKeywordKey, MetaKeywordType>
 

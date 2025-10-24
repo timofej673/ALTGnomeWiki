@@ -7,7 +7,7 @@ aggregation:
     play:
       id: anydesk
       build: unofficial
-  stplr:
+  aides:
     id: anydesk
     build: unofficial
 appstream:
@@ -36,7 +36,7 @@ AnyDesk — программа удалённого доступа, котора
 
 <!--@include: @ru/apps/.parts/install/content-flatpak.md-->
 
-<!--@include: @ru/apps/.parts/install/content-stplr.md-->
+<!--@include: @ru/apps/.parts/install/content-aides.md-->
 
 <!--@include: @ru/apps/.parts/install/content-epm-play.md-->
 

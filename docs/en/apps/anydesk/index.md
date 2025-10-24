@@ -7,7 +7,7 @@ aggregation:
     play:
       id: anydesk
       build: unofficial
-  stplr:
+  aides:
     id: anydesk
     build: unofficial
 appstream:
@@ -35,7 +35,7 @@ AnyDesk is a remote access program that allows users to manage remote computers 
 ![AnyDesk](/anydesk/anydesk-1.png)
 
 <!--@include: @en/apps/.parts/install/content-flatpak.md-->
-<!--@include: @en/apps/.parts/install/content-stplr.md-->
+<!--@include: @en/apps/.parts/install/content-aides.md-->
 <!--@include: @en/apps/.parts/install/content-epm-play.md-->
 
 You can enable the AnyDesk service with the following command:

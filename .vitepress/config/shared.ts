@@ -164,6 +164,11 @@ export const shared = defineConfigWithTheme<AGWTheme.Config>({
           target: '_blank',
           baseUrl: '//snapcraft.io/'
         },
+        aides: {
+          theme: 'aides',
+          target: '_blank',
+          baseUrl: '//pkgs.aides.space/pkg/'
+        },
         extension: {
           theme: 'extension',
           target: '_blank',
