@@ -23,4 +23,4 @@ Linux Theme Store — удобный и функциональный магаз�
 
 ![Linux Theme Store](/linux-theme-store/linux-theme-store-1.png)
 
-<!--@include: @apps/.parts/install/content-flatpak.md-->
+<!--@include: @ru/apps/.parts/install/content-flatpak.md-->
