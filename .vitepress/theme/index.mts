@@ -65,6 +65,7 @@ import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 import 'vitepress-markdown-timeline/dist/theme/index.css'
 import '@fancyapps/ui/dist/fancybox/fancybox.css'
 import { CompletionInfoFlags } from 'typescript'
+import AGWDownloads from './components/AGWDownloads.vue'
 
 export default {
   extends: DefaultTheme,
@@ -88,6 +89,7 @@ export default {
     app.component('app', AGWApp)
     app.component('download', AGWDownload)
     app.component('NolebasePagePropertiesEditor', NolebasePagePropertiesEditor)
+    app.component('Downloads', AGWDownloads)
     app.provide(NolebasePagePropertiesInjectionKey, nolebasePageProperties as NEROptions)
     app.use(NolebaseEnhancedReadabilitiesPlugin)
     app.use(NolebaseGitChangelogPlugin)

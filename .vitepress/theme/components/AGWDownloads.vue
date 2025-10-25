@@ -9,11 +9,15 @@ interface Props {
   layout?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  layout: 'doc'
+})
 
 const activeTab = ref(0)
 
 const isHomePage = computed(() => props.layout === 'home')
+const isDocPage = computed(() => props.layout === 'doc')
+const shouldShowTabs = computed(() => props.layout === 'home' || props.layout === 'doc')
 
 function setActiveTab(index: number) {
   activeTab.value = index
@@ -21,14 +25,14 @@ function setActiveTab(index: number) {
 </script>
 
 <template>
-  <div class="AGWDownloads" :class="{ 'home-layout': isHomePage }">
-    <div class="container">
+  <div class="AGWDownloads" :class="{ AGWDownloadsHome: isHomePage, AGWDownloadsDoc: isDocPage }">
+    <div :class="{ container: isHomePage }">
       <div v-if="isHomePage" class="AGWDownloadsTitle">
         <h2 v-if="title" class="title">{{ title }}</h2>
         <p v-if="lead" class="lead">{{ lead }}</p>
       </div>
 
-      <div v-if="isHomePage" class="tabs">
+      <div v-if="shouldShowTabs" class="tabs">
         <button
           v-for="(image, idx) in images"
           :key="idx"
@@ -40,8 +44,8 @@ function setActiveTab(index: number) {
         </button>
       </div>
 
-      <div class="download-rows" :class="{ 'tabs-content': isHomePage }">
-        <template v-if="isHomePage">
+      <div class="download-rows" :class="{ 'tabs-content': shouldShowTabs }">
+        <template v-if="shouldShowTabs">
           <AGWDownloadsItem
             v-for="(image, idx) in images"
             v-show="activeTab === Number(idx)"
@@ -75,9 +79,18 @@ function setActiveTab(index: number) {
   gap: 16px;
 }
 
-.home-layout {
+.AGWDownloadsHome {
   background-color: var(--vp-c-bg);
   border-top: 1px solid var(--vp-c-gutter);
+}
+
+.AGWDownloadsDoc {
+  margin-top: 32px;
+  padding: 0;
+}
+
+.AGWDownloadsDoc :deep(.VPButton) {
+  text-decoration: none;
 }
 
 .AGWDownloadsTitle {
