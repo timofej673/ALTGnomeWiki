@@ -20,6 +20,6 @@ withDefaults(defineProps<Props>(), {})
       <template v-if="fm.longtitle" #title> {{ fm.longtitle }} </template>
       <template v-if="fm.lead" #lead>{{ fm.lead }}</template>
     </AGWDownloadPageTitle>
-    <AGWDownloads />
+    <AGWDownloads :layout="fm.layout" />
   </AGWDownloadPage>
 </template>

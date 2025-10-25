@@ -17,6 +17,7 @@ const activeTab = ref(0)
 
 const isHomePage = computed(() => props.layout === 'home')
 const isDocPage = computed(() => props.layout === 'doc')
+const isDownloadPage = computed(() => props.layout === 'download')
 const shouldShowTabs = computed(() => props.layout === 'home' || props.layout === 'doc')
 
 function setActiveTab(index: number) {
@@ -26,7 +27,7 @@ function setActiveTab(index: number) {
 
 <template>
   <div class="AGWDownloads" :class="{ AGWDownloadsHome: isHomePage, AGWDownloadsDoc: isDocPage }">
-    <div :class="{ container: isHomePage }">
+    <div :class="{ container: isHomePage || isDownloadPage }">
       <div v-if="isHomePage" class="AGWDownloadsTitle">
         <h2 v-if="title" class="title">{{ title }}</h2>
         <p v-if="lead" class="lead">{{ lead }}</p>
