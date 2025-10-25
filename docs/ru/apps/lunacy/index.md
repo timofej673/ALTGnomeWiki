@@ -32,7 +32,9 @@ Lunacy — программа для векторной графики ново�
 
 ![lunacy-1](/lunacy/lunacy-1.jpg)
 
+:::warning
 Эта оболочка не проверена, не связана и не поддерживается Icons8 LLC.
+:::
 
 <!--@include: @ru/apps/.parts/install/content-flatpak.md-->
 <!--@include: @ru/apps/.parts/install/content-epm-play.md-->
