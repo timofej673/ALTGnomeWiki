@@ -202,13 +202,13 @@
 .VPBadge.success {
   border-color: transparent;
   color: var(--vp-c-success-1);
-  background-color: var(--vp-c-success-soft);
+  background-color: var(--vp-c-success-3);
 }
 
 .VPBadge.success-1 {
   border-color: transparent;
   color: var(--vp-c-white);
-  background-color: var(--vp-c-success-2);
+  background-color: var(--vp-c-success-3);
 }
 
 /**
