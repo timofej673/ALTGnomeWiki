@@ -34,10 +34,26 @@ export function useTeams() {
       }))
   })
 
-  const filterTeamsByIds = (teamIds: string[] | null): AGWTheme.TeamMember[] => {
-    if (!teamIds || !Array.isArray(teamIds) || teamIds.length === 0) {
+  const parseTeamIds = (tids: string | string[] | null): string[] => {
+    if (!tids) return []
+
+    if (Array.isArray(tids)) {
+      return tids
+    }
+
+    return tids
+      .split(',')
+      .map((id) => id.trim())
+      .filter((id) => id.length > 0)
+  }
+
+  const filterTeamsByIds = (tids: string | string[] | null): AGWTheme.TeamMember[] => {
+    const teamIds = parseTeamIds(tids)
+
+    if (teamIds.length === 0) {
       return teams.value
     }
+
     const idsSet = new Set(teamIds)
     return teams.value.filter((team) => team.title && idsSet.has(team.title))
   }

@@ -9,19 +9,14 @@ const props = withDefaults(defineProps<Member>(), {
   limit: 6,
   size: 'small',
   layout: 'doc',
-  tids: null,
-  homeLimit: 6
+  tids: null
 })
 
 const { teams, filterTeamsByIds, filterTeamsByLimit } = useTeams()
 
 const members = computed(() => {
-  const isHome = props.layout === 'home'
   const rowTeams = props.tids ? filterTeamsByIds(props.tids) : teams.value
-
-  const limit = isHome ? props.homeLimit : props.limit
-
-  return filterTeamsByLimit(rowTeams ?? [], limit)
+  return filterTeamsByLimit(rowTeams ?? [], props.limit)
 })
 </script>
 

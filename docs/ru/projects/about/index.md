@@ -18,4 +18,4 @@ gitChangelog: false
 
 Проект **ALT Gnome Wiki** принадлежит русскоязычному сообществу **ALT Gnome**, разрабатывается и поддерживается на добровольной основе. Каждый из участников сообщества является равноправным совладельцем проекта и вносит свой посильный вклад.
 
-<Teams tids="['olegshchavelev', 'Maks1mS', 'x1z53']" />
+<Teams tids="ampernic, olegshchavelev, Maks1mS, x1z53" />
