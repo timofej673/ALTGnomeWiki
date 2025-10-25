@@ -31,6 +31,4 @@ Linux Sound Plugins — коллекция плагинов для обрабо�
 
 ![Linux Sound Plugins](/linux-sound-plugins/linux-sound-plugins-2.png)
 
-
-
 <!--@include: @ru/apps/.parts/install/content-repo.md-->
