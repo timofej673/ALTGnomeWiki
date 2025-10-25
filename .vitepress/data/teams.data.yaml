@@ -47,6 +47,10 @@
     ru: Щавелев Олег
     en: Oleg Shchavelev
   title: olegshchavelev
+  mapByNameAliases:
+    - OlegShchavelev
+    - Oleg Shchavelev
+    - Олег Щавелев
   collaborator:
     - knowledge
     - maintainer

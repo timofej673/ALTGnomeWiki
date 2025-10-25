@@ -75,7 +75,6 @@ export interface Member {
   moreLink?: string
   moreText?: string
   limit?: number
-  homeLimit?: number
   size?: 'small' | 'medium'
 }
 
@@ -104,6 +103,7 @@ export namespace AGWTheme {
 
   export interface TeamMember extends DefaultTheme.TeamMember {
     collaborator: Collaborator
+    mapByNameAliases?: string[]
   }
 }
 
