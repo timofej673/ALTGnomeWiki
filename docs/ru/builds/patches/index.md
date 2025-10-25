@@ -1,2 +1,3 @@
 # Обновление или исправление пакетов с помощью патчей
-<!--@include: @/.parts/warns/constructing.md-->
+
+<!--@include: @ru/.parts/blocks/help-wanted-write.md-->

@@ -1,2 +1,2 @@
 # Сборка пакетов в ALT Regular Gnome
-<!--@include: @/.parts/warns/constructing.md-->
+<!--@include: @ru/.parts/blocks/help-wanted-write.md-->
