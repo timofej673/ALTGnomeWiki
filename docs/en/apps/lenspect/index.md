@@ -5,7 +5,7 @@ appstream:
   id: io.github.vmkspv.lenspect
   name: Lenspect
   icon: /lenspect/logo.svg
-  summary: Проверяйте файлы на угрозы
+  summary: Scan files for threats
   metadata_license:
     name: GNU GPLv3
     link: https://choosealicense.com/licenses/gpl-3.0/
@@ -20,7 +20,7 @@ appstream:
     bugtracker: https://github.com/vmkspv/lenspect/issues
     translate: https://github.com/vmkspv/lenspect/tree/main/po
 gallery:
-  title: Галерея
+  title: Gallery
   type: slider
   items:
     - src: /lenspect/sc-1.png
@@ -29,8 +29,8 @@ gallery:
 
 # Lenspect
 
-Легковесный сканер угроз безопасности, призванный сделать обнаружение вредоносного ПО более доступным и эффективным.
+A lightweight security threat scanner designed to make malware detection more accessible and efficient.
 
 <AGWGallery />
 
-<!--@include: @ru/apps/.parts/install/content-flatpak.md-->
+<!--@include: @en/apps/.parts/install/content-flatpak.md-->

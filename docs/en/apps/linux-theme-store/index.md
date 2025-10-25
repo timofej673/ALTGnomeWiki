@@ -5,7 +5,7 @@ appstream:
   id: io.github.debasish_patra_1987.linuxthemestore
   name: Linux Theme Store
   icon: /linux-theme-store/linux-theme-store-logo.svg
-  summary: Просмотр, поиск и управление установленными темами для рабочего стола
+  summary: View, search and manage installed desktop themes
   metadata_license:
     name: GNU GPLv3
     link: https://choosealicense.com/licenses/gpl-3.0/
@@ -19,8 +19,8 @@ appstream:
 
 # Linux Theme Store
 
-Linux Theme Store — удобный и функциональный магазин тем, курсоров, иконок и обоев.
+Linux Theme Store is a convenient and functional store for themes, cursors, icons and wallpapers.
 
 ![Linux Theme Store](/linux-theme-store/linux-theme-store-1.png)
 
-<!--@include: @ru/apps/.parts/install/content-flatpak.md-->
+<!--@include: @en/apps/.parts/install/content-flatpak.md-->

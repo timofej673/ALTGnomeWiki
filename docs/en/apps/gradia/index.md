@@ -9,7 +9,7 @@ appstream:
   id: be.alexandervanhee.gradia
   name: Gradia
   icon: /gradia/gradia-logo.svg
-  summary: Подготовьте свои скриншоты к публикации
+  summary: Prepare your screenshots for publication
   metadata_license:
     name: GNU GPLv3
     link: https://choosealicense.com/licenses/gpl-3.0/
@@ -23,10 +23,10 @@ appstream:
 
 # Gradia
 
-Gradia — приложение для изменения скриншотов окон приложений.
+Gradia is an application for changing screenshots of application windows.
 
 ![Gradia](/gradia/gradia-1.png)
 
-<!--@include: @ru/apps/.parts/install/content-repo.md-->
-<!--@include: @ru/apps/.parts/install/content-flatpak.md-->
-<!--@include: @ru/apps/.parts/install/content-snap.md-->
+<!--@include: @en/apps/.parts/install/content-repo.md-->
+<!--@include: @en/apps/.parts/install/content-flatpak.md-->
+<!--@include: @en/apps/.parts/install/content-snap.md-->

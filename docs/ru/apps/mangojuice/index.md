@@ -39,27 +39,11 @@ gallery:
 
 <AGWGallery />
 
-<!--@include: @ru/apps/.parts/install/software-repo.md-->
-
-#### Установка через терминал
-
-::: code-group
-
-```shell[apt-get]
-su -
-apt-get update
-apt-get install mangojuice
-```
-
-```shell[epm]
-epm -i mangojuice
-```
-
-:::
+<!--@include: @ru/apps/.parts/install/content-repo.md-->
 
 ## Комбинации клавиш
 
-| Комбинация клавиш |   Описание    |
+| Комбинация клавиш | Описание      |
 | ----------------- | ------------- |
 | [[Ctrl + T]]      | Тест          |
 | [[Ctrl + S]]      | Сохранить     |

@@ -14,13 +14,13 @@ appstream:
 
 # MPICH
 
-MPICH — высокопроизводительная реализация MPI для параллельных вычислений.
+MPICH is a high-performance implementation of MPI for parallel computing.
 
-## Установка из репозитория
+## Installation from repository
 
-**MPICH** можно установить любым привычным и удобным способом:
+**MPICH** can be installed in any familiar and convenient way:
 
-**Установка через терминал**
+**Installation via terminal**
 
 ::: code-group
 

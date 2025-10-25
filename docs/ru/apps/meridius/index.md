@@ -8,7 +8,7 @@ aggregation:
 appstream:
   id: meridius
   name: Meridius
-  icon: https://raw.githubusercontent.com/PurpleHorrorRus/Meridius/master/128x128.png
+  icon: /meridius/meridius-logo.png
   summary: Meridius — это абсолютно бесплатное приложение для прослушивания музыки в социальной сети VK
   keywords:
     - proprietary
@@ -28,7 +28,7 @@ appstream:
 
 Meridius — это абсолютно бесплатное приложение для прослушивания музыки в социальной сети VK. Приложение предлагает широкий функционал, схожий с функционалом самой социальной сети и множество уникальных функций и особенностей.
 
-![meridius](https://github.com/PurpleHorrorRus/Meridius/raw/master/screenshots/0.png)
+![meridius](/meridius/meridius-0.png)
 
 Особенности:
 
@@ -52,9 +52,8 @@ Meridius — это абсолютно бесплатное приложение
 - И многое другое!
 
 <!--@include: @ru/apps/.parts/install/content-flatpak.md-->
-
 <!--@include: @ru/apps/.parts/install/content-epm-play.md-->
 
 :::info
-При использовании EPM Play возможна проблема в получении кода смс при двухфакторной авторизации
+При использовании EPM Play возможна проблема в получении СМС-кода при двухфакторной авторизации
 :::
