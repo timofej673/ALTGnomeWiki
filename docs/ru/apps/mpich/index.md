@@ -1,39 +1,37 @@
-# Mpich
+---
+aggregation:
+  sisyphus: mpich
+appstream:
+  name: MPICH
+  summary: A high-performance implementation of MPI for parallel computing.
+  metadata_license:
+    name: BSD 3-Clause License
+    link: https://licenses.nuget.org/BSD-3-Clause
+  url:
+    homepage: https://www.mpich.org/
+    bugtracker: https://github.com/pmodels/mpich/issues
+---
 
-Mpich — высокопроизводительная реализация MPI для параллельных вычислений.
+# MPICH
 
-## Установка из исходного кода
+MPICH — высокопроизводительная реализация MPI для параллельных вычислений.
 
-- Установите компилятор `gcc`
+## Установка из репозитория
 
-```shell
+**MPICH** можно установить любым привычным и удобным способом:
+
+**Установка через терминал**
+
+::: code-group
+
+```shell-vue[apt-get]
 su -
-apt-get install gcc-c++
+apt-get update
+apt-get install mpich
 ```
 
-- Скачайте дистрибутив, распакуйте архив и перейдите в созданную папку
-
-```shell
-wget https://github.com/pmodels/mpich/releases/download/v4.1.2/mpich-4.1.2.tar.gz
-tar -xvf mpich-4.1.2.tar.gz
-cd mpich-4.1.2
+```shell-vue[epm]
+epm -i mpich
 ```
 
-- Скомпилируйте проект
-
-```shell
-su -
-./configure --prefix=/home/$USER/mpich-install --disable-fortran
-make
-make install
-```
-
-::: tip
-Флаг `--disable-fortran` отключает сборку для Fortran.
 :::
-
-- Добавьте путь к исполняемым файлам в `PATH` (от имени пользователя, которому собрали):
-
-```shell
-export PATH=/home/$USER/mpich-install/bin:$PATH
-```
