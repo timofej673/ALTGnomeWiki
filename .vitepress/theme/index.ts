@@ -9,7 +9,7 @@ import { Fancybox } from '@fancyapps/ui'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 
 /* Plugins options */
-import { nolebasePageProperties, yandexMetrikaOptions } from '../config/plugins/index.ts'
+import { nolebasePageProperties, yandexMetrikaOptions } from '../config/plugins/index'
 
 /* AGW */
 import AGWTeam from '@theme/components/AGWTeam.vue'
@@ -26,6 +26,8 @@ import AGWHomeApps from '@theme/components/AGWHomeApps.vue'
 import AGWDownload from '@theme/components/AGWDownload.vue'
 import AGWHomeDownloads from '@theme/components/AGWHomeDownloads.vue'
 import AGWDocsFooterBefore from '@theme/components/AGWDocFooterBefore.vue'
+
+import ContributorsList from '@theme/components/ContributorsList.vue'
 
 /* Metrics */
 import { yandexMetrika } from '@hywax/vitepress-yandex-metrika'
@@ -90,6 +92,7 @@ export default {
     app.component('download', AGWDownload)
     app.component('NolebasePagePropertiesEditor', NolebasePagePropertiesEditor)
     app.component('Downloads', AGWDownloads)
+    app.component('Test', ContributorsList)
     app.provide(NolebasePagePropertiesInjectionKey, nolebasePageProperties as NEROptions)
     app.use(NolebaseEnhancedReadabilitiesPlugin)
     app.use(NolebaseGitChangelogPlugin)

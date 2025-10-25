@@ -26,8 +26,7 @@
     ]
   },
   "scripts": {
-    "history:build": "npx esrun ./.tools/gitlog.ts",
-    "docs:dev": "npm run history:build -- --dev && vitepress dev",
+    "docs:dev": "vitepress dev",
     "docs:dev-host": "vitepress dev --host",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
