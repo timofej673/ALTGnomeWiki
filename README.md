@@ -100,6 +100,6 @@ npm run docs:dev
 
 ## Лицензия
 
-[MIT](https://github.com/OlegShchavelev/ALTRegularGnomeWiki/blob/main/LICENSE)
+[GPL-3.0+](https://altlinux.space/alt-gnome/wiki/src/branch/transfer/docs/ru/licence/index.md)
 
 Copyright © 2023-present <OLEG SHCHAVELEV>
