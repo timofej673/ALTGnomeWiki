@@ -8,7 +8,7 @@ aggregation:
 appstream:
   id: meridius
   name: Meridius
-  icon: https://raw.githubusercontent.com/PurpleHorrorRus/Meridius/master/128x128.png
+  icon: /meridius/meridius-logo.png
   summary: Meridius is a completely free application for listening to music on the VK social network
   keywords:
     - proprietary
@@ -28,7 +28,7 @@ appstream:
 
 Meridius is a completely free application for listening to music on the VK social network. The application offers wide functionality similar to the functionality of the social network itself and many unique functions and features.
 
-![meridius](https://github.com/PurpleHorrorRus/Meridius/raw/master/screenshots/0.png)
+![meridius](/meridius/meridius-0.png)
 
 Peculiarities:
 
