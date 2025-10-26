@@ -13,7 +13,7 @@ export type MetaKeywordKey =
   | 'oobe'
   | 'donttheme'
 
-export type MetaKeywordType = 'info' | 'success' | 'tip' | 'danger' | 'warning' | 'success-1'
+export type MetaKeywordType = 'info' | 'success' | 'tip' | 'danger' | 'warning'
 
 export type MetaActionKey = 'sisyphus' | 'flatpak' | 'snap' | 'aides' | 'extension' | 'more'
 

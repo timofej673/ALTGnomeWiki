@@ -146,7 +146,7 @@ export const shared = defineConfigWithTheme<AGWTheme.Config>({
         proprietary: 'danger',
         restrictions: 'danger',
         oobe: 'warning',
-        donttheme: 'success-1'
+        donttheme: 'success'
       },
       actions: {
         sisyphus: {
