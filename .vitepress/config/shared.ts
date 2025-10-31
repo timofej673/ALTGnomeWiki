@@ -58,7 +58,7 @@ export const shared = defineConfigWithTheme<AGWTheme.Config>({
       chunkSizeWarningLimit: 1600
     },
     plugins: [
-      vueDevTools(),
+      //vueDevTools(),
       visualizer({
         gzipSize: true,
         brotliSize: true,
